@@ -85,7 +85,9 @@ function Card({
           <StarOutlined style={{ fontSize: "25px" }} />
         </BotonFavorito>
       )}
+      <Link to={`/detail/${id}`} style={{ textDecoration: "none" }}>
       <img src={image} alt="" />
+      </Link>
       <Link to={`/detail/${id}`} style={{ textDecoration: "none" }}>
         <Name> Nombre: {name} </Name>
       </Link>

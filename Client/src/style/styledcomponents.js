@@ -14,8 +14,7 @@ export const Cuerpo = style.div`
 export const Tarjeta = style.div`
     background-color: rgb(3, 201, 136);
     padding: 10px;
-    margin: 2px;
-    max-hight: 400px;
+    margin: 10px;
     max-width: 300px;
     border-radius: 15px;
     font-family: 'Braah One', sans-serif;
