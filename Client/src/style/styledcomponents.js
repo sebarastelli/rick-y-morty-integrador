@@ -56,6 +56,11 @@ export const NavBar = style.div`
   align-items: baseline;
   background-color: #F5F3C1;
   border-bottom: 2px solid black;
+
+  @media screen and (max-width: 550px){
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Agregar = style.button`
@@ -169,6 +174,10 @@ display: flex;
 color: black;
 text-decoration: none;
 flex-direction: column;
+@media screen and (max-width: 550px){
+  margin-top: 20px;
+}
+
 `;
 
 export const LoginForm = style.div`
