@@ -55,7 +55,7 @@ function App() {
       const URL = 'http://localhost:3001/rickandmorty/login/';
       const { data } = await axios.get(URL + `?email=${email}&password=${password}`);
       const { access } = data;
-      setAccess(access);
+      setAccess(true);
       access && navigate('/home');
     } catch (error) {
       console.log(error.message)
