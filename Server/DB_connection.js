@@ -9,9 +9,15 @@ const UserModel = require('./models/User')
 // Recuerda pasarle la información de tu archivo '.env'.
 
 // URL ----> postgres://DB_USER:DB_PASSWORD@DB_HOST/rickandmorty
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/rickandmorty`,
-   { logging: false, native: false }
-);
+
+const sequelize = new Sequelize(DB_RENDER, {
+  logging: false,
+  native: false,
+  dialectOptions: {
+    ssl: true, // Deshabilitar la conexión SSL/TLS
+  },
+});
+
 
 // EJERCICIO 05
 // Debajo de este comentario puedes ejecutar la función de los modelos.
