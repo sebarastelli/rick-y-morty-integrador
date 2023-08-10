@@ -7,7 +7,7 @@ export const ORDER = "ORDER";
 
 export const addFavorite = (character) => {
   try {
-    const endpoint = "http://localhost:3001/rickandmorty/fav";
+    const endpoint = "https://rymserverdeploy.onrender.com/rickandmorty/fav";
     return async (dispatch) => {
       const { data } = await axios.post(endpoint, character)
       return dispatch({
@@ -23,7 +23,7 @@ export const addFavorite = (character) => {
 
 export const remFavorite = (id) => {
    try {
-      const endpoint = 'http://localhost:3001/rickandmorty/fav/' + id;
+      const endpoint = 'https://rymserverdeploy.onrender.com/rickandmorty/fav/' + id;
    return async(dispatch) => {
      const {data} = await axios.delete(endpoint)
          return dispatch({
