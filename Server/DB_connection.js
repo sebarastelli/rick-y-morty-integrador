@@ -14,7 +14,9 @@ const sequelize = new Sequelize(DB_RENDER, {
   logging: false,
   native: false,
   dialectOptions: {
-    ssl: true, // Deshabilitar la conexión SSL/TLS
+    ssl: {
+      rejectUnauthorized: false // Desactiva la validación SSL
+    }
   },
 });
 
