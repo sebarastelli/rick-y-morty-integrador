@@ -58,7 +58,7 @@ function App() {
 
   return (
     <Cuerpo className="App">
-      <Nav onSearch={onSearch} randomCard={randomCard} logOut={logOut} />
+      <Nav onSearch={onSearch} randomCard={randomCard} />
       <Routes>
         <Route path="/" element={<Form login={login} />} />
         <Route path="/about" element={<About />} />
