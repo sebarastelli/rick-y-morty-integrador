@@ -1,6 +1,6 @@
 import "./App.css";
 import Cards from "./components/Cards.jsx";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import axios from "axios";
 import { Cuerpo } from "./style/styledcomponents";
 import Nav from "./components/Nav";
@@ -47,7 +47,6 @@ function App() {
   };
 
   const navigate = useNavigate();
-  const [access, setAccess] = useState(false);
 
   async function login(){
     try {
@@ -55,10 +54,6 @@ function App() {
     } catch (error) {
       console.log(error.message)
     }
-  }
-
-  function logOut() {
-    setAccess(false);
   }
 
   return (
