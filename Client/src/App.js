@@ -56,9 +56,13 @@ function App() {
     }
   }
 
+  function logOut() {
+    navigate("/")
+  }
+
   return (
     <Cuerpo className="App">
-      <Nav onSearch={onSearch} randomCard={randomCard} />
+      <Nav onSearch={onSearch} randomCard={randomCard} logOut={logOut}/>
       <Routes>
         <Route path="/" element={<Form login={login} />} />
         <Route path="/about" element={<About />} />
