@@ -49,26 +49,13 @@ function App() {
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
 
-  async function login(userData){
+  async function login(){
     try {
-      const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
-      const { data } = await axios.get(URL + `?email=${email}&password=${password}`);
-      const { access } = data;
-      setAccess(true);
-      access && navigate('/home');
+      navigate('/home');
     } catch (error) {
       console.log(error.message)
     }
   }
-
-
-
- 
-
-  useEffect(() => {
-    !access && navigate("/");
-  }, [access, navigate]);
 
   function logOut() {
     setAccess(false);
